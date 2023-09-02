@@ -1,0 +1,88 @@
+#root {
+	color: black;
+	max-width: 1280px;
+	padding: 2rem;
+	text-align: center;
+	place-content: center;
+	background-color: #ffffff;
+}
+
+.flex-quadrant-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-gap: 50px;
+	justify-content: center;
+	margin: 3rem 3rem;
+}
+
+.banner {
+	background-image: url(/images/THD_Wood_Pattern_Update_2.jpg);
+	color: white;
+	font-family: 'Saira Stencil One', monospace;
+	font-weight: bolder;
+	font-size: large;
+}
+
+.modal-volunteer {
+	position: fixed;
+	left: 50%;
+	top: 15%;
+	padding: 25px;
+	transform: translate(-50%, 0);
+	justify-content: center;
+	z-index: 99;
+	width: 400px;
+	height: auto;
+	background-color: rgba(225, 235, 223, 0.9);
+	border-radius: 25px;
+}
+
+.store-selector-modal {
+	position: fixed;
+	left: 50%;
+	top: 15%;
+	padding: 25px;
+	transform: translate(-50%, 0);
+	justify-content: center;
+	z-index: 99;
+	width: 400px;
+	height: auto;
+	background-color: rgba(225, 235, 223, 0.9);
+	border-radius: 25px;
+}
+
+.button-bar {
+	/* border: .1px solid black;
+	border-radius: 10px; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.store-selector {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+.store-number-display {
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: left;
+}
+
+.store-selector-button {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#store-number-display {
+	font-size: 60px;
+}

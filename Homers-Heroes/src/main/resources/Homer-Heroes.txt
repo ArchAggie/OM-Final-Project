@@ -1,0 +1,43 @@
+Steps to create database and tables for Homer-Heroes Application:
+
+1) To Create database , run the below command:
+
+# Create database homerheroes;
+
+2) To Create Tables projects and volunteers ,run the below command:
+
+# CREATE TABLE Projects (
+ 	project_id serial PRIMARY KEY,
+ 	project_name VARCHAR ( 50 )  NOT NULL,
+ 	project_date VARCHAR(20) NOT NULL,
+ 	project_description VARCHAR ( 255 )  NULL
+ );
+
+
+ # CREATE TABLE Volunteers (
+ 	Volunteer_id serial PRIMARY KEY,
+ 	firstName VARCHAR ( 50 )  NOT NULL,
+ 	lastName VARCHAR ( 50 )  NOT NULL,
+ 	preferredContact VARCHAR(10) NOT NULL,
+ 	phoneNumber varchar(20),
+ 	emailAddress varchar(50),
+    project_id INTEGER REFERENCES projects (project_id)
+ );
+
+ 3) To Add Foreign key constraint , run the below command:
+
+ ALTER TABLE Volunteers
+     ADD CONSTRAINT fk_projects_Volunteers FOREIGN KEY (project_id) REFERENCES projects (project_id);
+
+     4)Select Queries:
+
+     select * from Volunteers;
+     select * from projects;
+
+     5)Insert sample data into Projects table manually until we establish the crud for Projects table.
+
+     insert into Projects values (1,'Bake Sale','2023-01-02','Cake Bake');
+
+
+
+

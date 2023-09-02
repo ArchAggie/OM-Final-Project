@@ -1,0 +1,151 @@
+#Api to retrieve list of Projects
+
+Method:GET 
+
+URL: localhost:8080/projects
+
+API Response:
+
+{
+  "projects": [
+    {
+      "projectId":"1",
+      "projectName": "Bake Sale",
+      "projectDate": "2023-06-01",
+      "projectCategory": "Sale",
+    
+    }
+  ]
+}
+
+
+**********************************************************
+
+
+#Api to retrieve list of volunteers
+
+Method:GET 
+
+URL: localhost:8080/volunteers
+
+APi Response:
+
+{
+  "volunteers": [
+    {
+      "volunteerId":"1",
+      "firstName": "ABC",
+      "lastName": "XYZ",
+      "preferredContactMethod": "EMAIL/PHONE",
+      "phoneNumber":"000000000",
+      "emailAddress:"ABC@XYZ.COM",
+      "projectId":"1"
+    
+    }
+  ]
+}
+**********************************************************
+
+
+#Api to add list of volunteers
+
+Method:POST 
+
+URL: localhost:8080/volunteers
+
+
+API request:
+
+"volunteerRequest":
+{
+      "firstName": "ABC",
+      "lastName": "XYZ",
+      "preferredContactMethod": "EMAIL/PHONE",
+      "phoneNumber":"000000000",
+      "emailAddress:"ABC@XYZ.COM",
+      "projectId":"1"
+}
+
+
+
+
+APi Response:
+
+{
+  "volunteers": [
+    {
+      "volunteerId":"1",
+      "firstName": "ABC",
+      "lastname": "XYZ",
+      "preferredContactMethod": "EMAIL/PHONE",
+      "phoneNumber":"000000000",
+      "emailAddress:"ABC@XYZ.COM",
+      "projectId":"1"
+    
+    }
+  ]
+}
+
+**********************************************************
+
+
+#Api to update list of volunteers
+
+Method:PUT/PATCH 
+
+URL: localhost:8080/volunteers/{volunteerId}
+
+
+API request:
+
+No mandatory fields required.The fields that need to be updated will be sent.
+(Assuming it as PATCH)
+
+"volunteerRequest":
+{
+      "firstName": "ABC",
+      "lastName": "XYZ",
+      "preferredContactMethod": "EMAIL/PHONE",
+      "phoneNumber":"000000000",
+      "emailAddress:"ABC@XYZ.COM",
+      "projectId":"1"
+}
+
+
+
+
+API Response:
+
+{
+  "volunteers": [
+    {
+      "volunteerId":"1",
+      "firstName": "ABC",
+      "lastName": "XYZ",
+      "preferredContactMethod": "EMAIL/PHONE",
+      "phoneNumber":"000000000",
+      "emailAddress:"ABC@XYZ.COM",
+      "projectId":"1"
+    
+    }
+  ]
+}
+
+
+**********************************************************
+
+
+#Api to Delete particular volunteers
+
+Method:DELETE 
+
+URL: localhost:8080/volunteers/{volunteerId}
+
+APi Response:
+
+No response.
+**********************************************************
+
+
+
+

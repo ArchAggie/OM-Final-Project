@@ -1,0 +1,223 @@
+#Api to retrieve list of Projects
+
+
+Method:GET
+
+URL: localhost:8080/projects
+
+API Response:
+
+[
+    {
+        "project_id": 1,
+        "project_name": "Bake Sale",
+        "project_date": "2023-01-02",
+        "project_description": "Cake Bake"
+    },
+    {
+        "project_id": 2,
+        "project_name": "Big Event",
+        "project_date": "2023-03-05",
+        "project_description": "Helping hands"
+    },
+    {
+        "project_id": 3,
+        "project_name": "Big Event",
+        "project_date": "2023-03-05",
+        "project_description": "Helping hands"
+    }
+]
+
+
+method: POST
+
+URL: localhost:8080/projects
+
+
+API Request:
+{
+            "project_name": "Big Event",
+            "project_date": "2023-03-05",
+            "project_description": "Helping hands"
+    }
+
+
+
+    Api response:
+
+  {
+      "project_id": 3,
+      "project_name": "Big Event",
+      "project_date": "2023-03-05",
+      "project_description": "Helping hands"
+  }
+
+
+**********************************************************
+method: PUT
+
+URL: localhost:8080/projects/1
+
+
+API Request:
+{
+            "project_name": "Big Event",
+            "project_date": "2023-03-05",
+            "project_description": "Helping hands"
+    }
+
+
+Api response:
+
+{
+    "project_id": 1,
+    "project_name": "Bake Sale",
+    "project_date": "2023-01-02",
+    "project_description": "Cake Bake"
+}
+
+**********************************************************
+method: DELETE
+
+(You can't delete an entry from project table if the project id exist in Volunteer table.
+As of now , wewill keep this DELETE not available
+
+URL: localhost:8080/projects/1
+
+
+**********************************************************
+
+
+#Api to retrieve list of volunteers
+
+Method:GET
+
+URL: localhost:8080/Volunteers
+
+APi Response:
+
+[
+    {
+        "firstName": "Taylor",
+        "lastName": "Day",
+        "preferredContact": "EMAIL",
+        "phoneNumber": "2045",
+        "emailAddress": "Taylor.Day@gmail.com",
+        "project_id": 1,
+        "volunteer_id": 5
+    },
+    {
+        "firstName": "Taylor2",
+        "lastName": "Da2y",
+        "preferredContact": "EMAIL",
+        "phoneNumber": "2333345",
+        "emailAddress": "Taylor.Day@gmail.com",
+        "project_id": 1,
+        "volunteer_id": 6
+    },
+    {
+        "firstName": "Taylor2",
+        "lastName": "Da2y",
+        "preferredContact": "EMAIL",
+        "phoneNumber": "2333567673",
+        "emailAddress": "Taylor.Day@gmail.com",
+        "project_id": 1,
+        "volunteer_id": 7
+    }
+]
+**********************************************************
+
+
+#Api to add list of volunteers
+
+Method:POST
+
+URL: localhost:8080/Volunteers
+
+
+API request:
+
+
+{
+    "firstName":"Taylor2",
+    "lastName":"Da2y",
+    "preferredContact":"EMAIL",
+    "phoneNumber":2333567673,
+    "emailAddress":"Taylor.Day@gmail.com",
+         "project_id":"1"
+
+}
+
+
+
+
+APi Response:
+
+{
+    "firstName": "Taylor2",
+    "lastName": "Da2y",
+    "preferredContact": "EMAIL",
+    "phoneNumber": "2333567673",
+    "emailAddress": "Taylor.Day@gmail.com",
+    "project_id": 1,
+    "volunteer_id": 7
+}
+
+**********************************************************
+
+
+#Api to update list of volunteers
+
+Method:PUT
+
+URL: localhost:8080/Volunteers/7
+
+
+API request:
+
+No mandatory fields required.The fields that need to be updated will be sent.
+(Assuming it as PATCH)
+
+{
+    "firstName": "Taylor2",
+        "lastName": "Da2y",
+        "preferredContact": "EMAIL",
+        "phoneNumber": "2333567673",
+        "emailAddress": "Taylor.Day@gmail.com",
+        "project_id": 1,
+        "volunteer_id": 7
+}
+
+
+
+API Response:
+
+{
+    "firstName": "Taylor2",
+    "lastName": "Da2y",
+    "preferredContact": "EMAIL",
+    "phoneNumber": "2333567673",
+    "emailAddress": "Taylor.Day@gmail.com",
+    "project_id": 1,
+    "volunteer_id": 7
+}
+
+
+**********************************************************
+
+
+#Api to Delete particular volunteers
+
+Method:DELETE
+
+URL: localhost:8080/Volunteers/4
+
+APi Response:
+
+No response.
+**********************************************************
+
+
+
+
+
